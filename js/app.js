@@ -11,7 +11,18 @@ function onLocalized() {
         };
     }
 }
-document.webL10n.ready(onLocalized);
-setTimeout(function() {
-    list_language.item(0).click();
-}, 500);
+$(document).ready(function() {
+    document.webL10n.ready(onLocalized);
+    $('#index #drawer form input').keyup(function() {
+        var text = $.trim($(this).val());
+        if (text) {
+            $('#index #drawer article ul li').hide();
+            $("#index #drawer article ul li a p:first-child:contains('" + text + "')").closest('li').fadeIn();
+        } else {
+            $('#index #drawer article ul li').show();
+        }
+    });
+    $('#index #drawer form button').click(function() {
+        $('#index #drawer article ul li').show();
+    });
+});
