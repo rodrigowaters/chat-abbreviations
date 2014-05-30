@@ -17,7 +17,7 @@ $(document).ready(function() {
         var text = $.trim($(this).val());
         if (text) {
             $('#index #drawer article ul li').hide();
-            $("#index #drawer article ul li a p:first-child:contains('" + ( text.toUpperCase() ) + "')").closest('li').fadeIn();
+            $("#index #drawer article ul li a p:first-child:contains('" + (text.toUpperCase()) + "')").closest('li').fadeIn();
         } else {
             $('#index #drawer article ul li').show();
         }
