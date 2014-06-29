@@ -5,258 +5,230 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, user-scalable=no" />
         <link rel="shortcut icon" type="image/png" href="images/icons/favicon.png" />
-        <!-- Building blocks -->
-        <link rel="stylesheet" href="style/action_menu.css">
-        <link rel="stylesheet" href="style/buttons.css">
-        <link rel="stylesheet" href="style/confirm.css">
-        <link rel="stylesheet" href="style/edit_mode.css">
-        <link rel="stylesheet" href="style/headers.css">
-        <link rel="stylesheet" href="style/input_areas.css">
-        <link rel="stylesheet" href="style/status.css">
-        <link rel="stylesheet" href="style/switches.css">
-        <link rel="stylesheet" href="style/drawer.css">
-        <link rel="stylesheet" href="style/lists.css">
-        <link rel="stylesheet" href="style/progress_activity.css">
-        <link rel="stylesheet" href="style/scrolling.css">
-        <link rel="stylesheet" href="style/seekbars.css">
-        <link rel="stylesheet" href="style/tabs.css">
-        <link rel="stylesheet" href="style/toolbars.css">
-
-        <!-- Icons -->
-        <link rel="stylesheet" href="icons/styles/action_icons.css">
-        <link rel="stylesheet" href="icons/styles/media_icons.css">
-        <link rel="stylesheet" href="icons/styles/comms_icons.css">
-        <link rel="stylesheet" href="icons/styles/settings_icons.css">
-
-        <!-- Transitions -->
-        <link rel="stylesheet" href="transitions.css">
-
-        <!-- Util CSS: some extra tricks -->
-        <link rel="stylesheet" href="util.css">
-
-        <!-- Additional markup to make Building Blocks kind of cross browser -->
-        <!--link rel="stylesheet" href="cross_browser.css"-->
-        <link rel="stylesheet" href="custom.css">
+        <link rel="stylesheet" href="css/ionic.min.css">
+        <link rel="stylesheet" href="css/custom.css">
         <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="js/l10n.js"></script>
-        <link rel="prefetch" type="application/l10n" href="locale/locales.ini" />
+        <script type="text/javascript" src="js/app.js"></script>
+        <link rel="prefetch" type="application/l10n" href="data/locales.ini" />
     </head>
     <body>
-        <section id="index" data-position="current">
-            <section data-type="sidebar">
-                <header>
-                    <menu type="toolbar">
-                        <a href="#" data-l10n-id="close_menu"></a>
-                    </menu>
-                    <h1>Menu</h1>
-                </header>
-                <nav>
-                    <h2 data-l10n-id="select_option_language"></h2>
-                    <ul>
-                        <li><a href="#" id="en-US">English</a></li>
-                        <li><a href="#" id="pt-BR">Português ( Brasil )</a></li>
-                    </ul>
-                </nav>
-            </section>
-            <section id="drawer" role="region">
-                <header>
-                    <a href="#"><span class="icon icon-menu">hide sidebar</span></a>
-                    <a href="#drawer"><span class="icon icon-menu">show sidebar</span></a>
-                    <h1>Chat Abbreviations</h1>
-                </header>
-                <header>
-                    <form action="#">
-                        <input data-l10n-id="search_text" type="text" />
-                        <button type="reset">Remove text</button>
-                    </form>
-                </header>
-                <article class="scrollable header">
-                    <div data-type="list">
-                        <ul>
-                            <li><a href="#"><p>121</p><p data-l10n-id="121"></p></a></li>
-                            <li><a href="#"><p>AFAIK</p><p data-l10n-id="AFAIK"></p></a></li>
-                            <li><a href="#"><p>AFK</p><p data-l10n-id="AFK"></p></a></li>
-                            <li><a href="#"><p>AKA</p><p data-l10n-id="AKA"></p></a></li>
-                            <li><a href="#"><p>ARE</p><p data-l10n-id="ARE"></p></a></li>
-                            <li><a href="#"><p>ASAP</p><p data-l10n-id="ASAP"></p></a></li>
-                            <li><a href="#"><p>A/S/L?</p><p data-l10n-id="A_S_L"></p></a></li>
-                            <li><a href="#"><p>B4</p><p data-l10n-id="B4"></p></a></li>
-                            <li><a href="#"><p>B4N</p><p data-l10n-id="B4N"></p></a></li>
-                            <li><a href="#"><p>BAK</p><p data-l10n-id="BAK"></p></a></li>
-                            <li><a href="#"><p>BBIAB</p><p data-l10n-id="BBIAB"></p></a></li>
-                            <li><a href="#"><p>BBL</p><p data-l10n-id="BBL"></p></a></li>
-                            <li><a href="#"><p>BBML</p><p data-l10n-id="BBML"></p></a></li>
-                            <li><a href="#"><p>BBN</p><p data-l10n-id="BBN"></p></a></li>
-                            <li><a href="#"><p>BBS</p><p data-l10n-id="BBS"></p></a></li>
-                            <li><a href="#"><p>BEG</p><p data-l10n-id="BEG"></p></a></li>
-                            <li><a href="#"><p>BF</p><p data-l10n-id="BF"></p></a></li>
-                            <li><a href="#"><p>BFN</p><p data-l10n-id="BFN"></p></a></li>
-                            <li><a href="#"><p>BG</p><p data-l10n-id="BG"></p></a></li>
-                            <li><a href="#"><p>BL</p><p data-l10n-id="BL"></p></a></li>
-                            <li><a href="#"><p>BRB</p><p data-l10n-id="BRB"></p></a></li>
-                            <li><a href="#"><p>BTA</p><p data-l10n-id="BTA"></p></a></li>
-                            <li><a href="#"><p>BTW</p><p data-l10n-id="BTW"></p></a></li>
-                            <li><a href="#"><p>BWL</p><p data-l10n-id="BWL"></p></a></li>
-                            <li><a href="#"><p>BWTHDIK</p><p data-l10n-id="BWTHDIK"></p></a></li>
-                            <li><a href="#"><p>C&G</p><p data-l10n-id="C&G"></p></a></li>
-                            <li><a href="#"><p>CID</p><p data-l10n-id="CID"></p></a></li>
-                            <li><a href="#"><p>CNP</p><p data-l10n-id="CNP"></p></a></li>
-                            <li><a href="#"><p>CP</p><p data-l10n-id="CP"></p></a></li>
-                            <li><a href="#"><p>CRBT</p><p data-l10n-id="CRBT"></p></a></li>
-                            <li><a href="#"><p>CSG</p><p data-l10n-id="CSG"></p></a></li>
-                            <li><a href="#"><p>CU</p><p data-l10n-id="CU"></p></a></li>
-                            <li><a href="#"><p>CUL</p><p data-l10n-id="CUL"></p></a></li>
-                            <li><a href="#"><p>CUL8ER</p><p data-l10n-id="CUL8ER"></p></a></li>
-                            <li><a href="#"><p>CUZ</p><p data-l10n-id="CUZ"></p></a></li>
-                            <li><a href="#"><p>CYO</p><p data-l10n-id="CYO"></p></a></li>
-                            <li><a href="#"><p>DIKU</p><p data-l10n-id="DIKU"></p></a></li>
-                            <li><a href="#"><p>DL</p><p data-l10n-id="DL"></p></a></li>
-                            <li><a href="#"><p>DLTBBB</p><p data-l10n-id="DLTBBB"></p></a></li>
-                            <li><a href="#"><p>DQMOT</p><p data-l10n-id="DQMOT"></p></a></li>
-                            <li><a href="#"><p>EG</p><p data-l10n-id="EG"></p></a></li>
-                            <li><a href="#"><p>EMFBI</p><p data-l10n-id="EMFBI"></p></a></li>
-                            <li><a href="#"><p>EOM</p><p data-l10n-id="EOM"></p></a></li>
-                            <li><a href="#"><p>EOT</p><p data-l10n-id="EOT"></p></a></li>
-                            <li><a href="#"><p>F2F</p><p data-l10n-id="F2F"></p></a></li>
-                            <li><a href="#"><p>FAQ</p><p data-l10n-id="FAQ"></p></a></li>
-                            <li><a href="#"><p>FC</p><p data-l10n-id="FC"></p></a></li>
-                            <li><a href="#"><p>FISH</p><p data-l10n-id="FISH"></p></a></li>
-                            <li><a href="#"><p>FMTYEWTK</p><p data-l10n-id="FMTYEWTK"></p></a></li>
-                            <li><a href="#"><p>FOMCL</p><p data-l10n-id="FOMCL"></p></a></li>
-                            <li><a href="#"><p>FTBOMH</p><p data-l10n-id="FTBOMH"></p></a></li>
-                            <li><a href="#"><p>FUD</p><p data-l10n-id="FUD"></p></a></li>
-                            <li><a href="#"><p>FWIW</p><p data-l10n-id="FWIW"></p></a></li>
-                            <li><a href="#"><p>FYI</p><p data-l10n-id="FYI"></p></a></li>
-                            <li><a href="#"><p>GA</p><p data-l10n-id="GA"></p></a></li>
-                            <li><a href="#"><p>GAL</p><p data-l10n-id="GAL"></p></a></li>
-                            <li><a href="#"><p>GD&R</p><p data-l10n-id="GD&R"></p></a></li>
-                            <li><a href="#"><p>GF</p><p data-l10n-id="GF"></p></a></li>
-                            <li><a href="#"><p>GFN</p><p data-l10n-id="GFN"></p></a></li>
-                            <li><a href="#"><p>GIWIST</p><p data-l10n-id="GIWIST"></p></a></li>
-                            <li><a href="#"><p>GMBO</p><p data-l10n-id="GMBO"></p></a></li>
-                            <li><a href="#"><p>GMT A</p><p data-l10n-id="GMT_A"></p></a></li>
-                            <li><a href="#"><p>GOL</p><p data-l10n-id="GOL"></p></a></li>
-                            <li><a href="#"><p>GTRM</p><p data-l10n-id="GTRM"></p></a></li>
-                            <li><a href="#"><p>GTSY</p><p data-l10n-id="GTSY"></p></a></li>
-                            <li><a href="#"><p>H&K</p><p data-l10n-id="H&K"></p></a></li>
-                            <li><a href="#"><p>HAGN</p><p data-l10n-id="HAGN"></p></a></li>
-                            <li><a href="#"><p>HHIS</p><p data-l10n-id="HHIS"></p></a></li>
-                            <li><a href="#"><p>HTH</p><p data-l10n-id="HTH"></p></a></li>
-                            <li><a href="#"><p>lAC</p><p data-l10n-id="lAC"></p></a></li>
-                            <li><a href="#"><p>IAE</p><p data-l10n-id="IAE"></p></a></li>
-                            <li><a href="#"><p>IANAL</p><p data-l10n-id="IANAL"></p></a></li>
-                            <li><a href="#"><p>IC</p><p data-l10n-id="IC"></p></a></li>
-                            <li><a href="#"><p>IDK</p><p data-l10n-id="IDK"></p></a></li>
-                            <li><a href="#"><p>IHA</p><p data-l10n-id="IHA"></p></a></li>
-                            <li><a href="#"><p>IIRC</p><p data-l10n-id="IIRC"></p></a></li>
-                            <li><a href="#"><p>ILU</p><p data-l10n-id="ILU"></p></a></li>
-                            <li><a href="#"><p>IM</p><p data-l10n-id="IM"></p></a></li>
-                            <li><a href="#"><p>IMHO</p><p data-l10n-id="IMHO"></p></a></li>
-                            <li><a href="#"><p>IMing</p><p data-l10n-id="IMing"></p></a></li>
-                            <li><a href="#"><p>IMNSHO</p><p data-l10n-id="IMNSHO"></p></a></li>
-                            <li><a href="#"><p>IMO</p><p data-l10n-id="IMO"></p></a></li>
-                            <li><a href="#"><p>lOW</p><p data-l10n-id="lOW"></p></a></li>
-                            <li><a href="#"><p>IPN</p><p data-l10n-id="IPN"></p></a></li>
-                            <li><a href="#"><p>IRL</p><p data-l10n-id="IRL"></p></a></li>
-                            <li><a href="#"><p>IWALU</p><p data-l10n-id="IWALU"></p></a></li>
-                            <li><a href="#"><p>IYSWIM</p><p data-l10n-id="IYSWIM"></p></a></li>
-                            <li><a href="#"><p>JBOD</p><p data-l10n-id="JBOD"></p></a></li>
-                            <li><a href="#"><p>JIC</p><p data-l10n-id="JIC"></p></a></li>
-                            <li><a href="#"><p>JK</p><p data-l10n-id="JK"></p></a></li>
-                            <li><a href="#"><p>JMO</p><p data-l10n-id="JMO"></p></a></li>
-                            <li><a href="#"><p>JTLYK</p><p data-l10n-id="JTLYK"></p></a></li>
-                            <li><a href="#"><p>JW</p><p data-l10n-id="JW"></p></a></li>
-                            <li><a href="#"><p>K</p><p data-l10n-id="K"></p></a></li>
-                            <li><a href="#"><p>KIT</p><p data-l10n-id="KIT"></p></a></li>
-                            <li><a href="#"><p>KOC</p><p data-l10n-id="KOC"></p></a></li>
-                            <li><a href="#"><p>KOL</p><p data-l10n-id="KOL"></p></a></li>
-                            <li><a href="#"><p>KWIM</p><p data-l10n-id="KWIM"></p></a></li>
-                            <li><a href="#"><p>L2M</p><p data-l10n-id="L2M"></p></a></li>
-                            <li><a href="#"><p>L8R</p><p data-l10n-id="L8R"></p></a></li>
-                            <li><a href="#"><p>LD</p><p data-l10n-id="LD"></p></a></li>
-                            <li><a href="#"><p>LDR</p><p data-l10n-id="LDR"></p></a></li>
-                            <li><a href="#"><p>LHM</p><p data-l10n-id="LHM"></p></a></li>
-                            <li><a href="#"><p>LHU</p><p data-l10n-id="LHU"></p></a></li>
-                            <li><a href="#"><p>LLTA</p><p data-l10n-id="LLTA"></p></a></li>
-                            <li><a href="#"><p>LMIRL</p><p data-l10n-id="LMIRL"></p></a></li>
-                            <li><a href="#"><p>LMSO</p><p data-l10n-id="LMSO"></p></a></li>
-                            <li><a href="#"><p>LOL</p><p data-l10n-id="LOL"></p></a></li>
-                            <li><a href="#"><p>LRF</p><p data-l10n-id="LRF"></p></a></li>
-                            <li><a href="#"><p>LSHMBB</p><p data-l10n-id="LSHMBB"></p></a></li>
-                            <li><a href="#"><p>LSHMBH</p><p data-l10n-id="LSHMBH"></p></a></li>
-                            <li><a href="#"><p>LSHTTARDML</p><p data-l10n-id="LSHTTARDML"></p></a></li>
-                            <li><a href="#"><p>LTM</p><p data-l10n-id="LTM"></p></a></li>
-                            <li><a href="#"><p>PMP</p><p data-l10n-id="PMP"></p></a></li>
-                            <li><a href="#"><p>POAHF</p><p data-l10n-id="POAHF"></p></a></li>
-                            <li><a href="#"><p>POS</p><p data-l10n-id="POS"></p></a></li>
-                            <li><a href="#"><p>POTS</p><p data-l10n-id="POTS"></p></a></li>
-                            <li><a href="#"><p>PU</p><p data-l10n-id="PU"></p></a></li>
-                            <li><a href="#"><p>QSL</p><p data-l10n-id="QSL"></p></a></li>
-                            <li><a href="#"><p>QSO</p><p data-l10n-id="QSO"></p></a></li>
-                            <li><a href="#"><p>QT</p><p data-l10n-id="QT"></p></a></li>
-                            <li><a href="#"><p>RL</p><p data-l10n-id="RL"></p></a></li>
-                            <li><a href="#"><p>ROL</p><p data-l10n-id="ROL"></p></a></li>
-                            <li><a href="#"><p>ROTFL</p><p data-l10n-id="ROTFL"></p></a></li>
-                            <li><a href="#"><p>RPG</p><p data-l10n-id="RPG"></p></a></li>
-                            <li><a href="#"><p>RSN</p><p data-l10n-id="RSN"></p></a></li>
-                            <li><a href="#"><p>RYO</p><p data-l10n-id="RYO"></p></a></li>
-                            <li><a href="#"><p>S4L</p><p data-l10n-id="S4L"></p></a></li>
-                            <li><a href="#"><p>SETE</p><p data-l10n-id="SETE"></p></a></li>
-                            <li><a href="#"><p>SF</p><p data-l10n-id="SF"></p></a></li>
-                            <li><a href="#"><p>SHCOON</p><p data-l10n-id="SHCOON"></p></a></li>
-                            <li><a href="#"><p>SHID</p><p data-l10n-id="SHID"></p></a></li>
-                            <li><a href="#"><p>SNERT</p><p data-l10n-id="SNERT"></p></a></li>
-                            <li><a href="#"><p>SO</p><p data-l10n-id="SO"></p></a></li>
-                            <li><a href="#"><p>SO MY</p><p data-l10n-id="SO_MY"></p></a></li>
-                            <li><a href="#"><p>SOT</p><p data-l10n-id="SOT"></p></a></li>
-                            <li><a href="#"><p>SOTMG</p><p data-l10n-id="SOTMG"></p></a></li>
-                            <li><a href="#"><p>STW</p><p data-l10n-id="STW"></p></a></li>
-                            <li><a href="#"><p>SUP</p><p data-l10n-id="SUP"></p></a></li>
-                            <li><a href="#"><p>WU</p><p data-l10n-id="WU"></p></a></li>
-                            <li><a href="#"><p>SWAK</p><p data-l10n-id="SWAK"></p></a></li>
-                            <li><a href="#"><p>SWL</p><p data-l10n-id="SWL"></p></a></li>
-                            <li><a href="#"><p>SYS</p><p data-l10n-id="SYS"></p></a></li>
-                            <li><a href="#"><p>TA</p><p data-l10n-id="TA"></p></a></li>
-                            <li><a href="#"><p>TAFN</p><p data-l10n-id="TAFN"></p></a></li>
-                            <li><a href="#"><p>TAW</p><p data-l10n-id="TAW"></p></a></li>
-                            <li><a href="#"><p>TCOB</p><p data-l10n-id="TCOB"></p></a></li>
-                            <li><a href="#"><p>TCOY</p><p data-l10n-id="TCOY"></p></a></li>
-                            <li><a href="#"><p>TFH</p><p data-l10n-id="TFH"></p></a></li>
-                            <li><a href="#"><p>TGIF</p><p data-l10n-id="TGIF"></p></a></li>
-                            <li><a href="#"><p>THX</p><p data-l10n-id="THX"></p></a></li>
-                            <li><a href="#"><p>TIA</p><p data-l10n-id="TIA"></p></a></li>
-                            <li><a href="#"><p>TILII</p><p data-l10n-id="TILII"></p></a></li>
-                            <li><a href="#"><p>TLK2UL8R</p><p data-l10n-id="TLK2UL8R"></p></a></li>
-                            <li><a href="#"><p>TMI</p><p data-l10n-id="TMI"></p></a></li>
-                            <li><a href="#"><p>TNT</p><p data-l10n-id="TNT"></p></a></li>
-                            <li><a href="#"><p>TOPCA</p><p data-l10n-id="TOPCA"></p></a></li>
-                            <li><a href="#"><p>TOY</p><p data-l10n-id="TOY"></p></a></li>
-                            <li><a href="#"><p>TPTB</p><p data-l10n-id="TPTB"></p></a></li>
-                            <li><a href="#"><p>TTFN</p><p data-l10n-id="TTFN"></p></a></li>
-                            <li><a href="#"><p>TTT</p><p data-l10n-id="TTT"></p></a></li>
-                            <li><a href="#"><p>TTYL</p><p data-l10n-id="TTYL"></p></a></li>
-                            <li><a href="#"><p>TU</p><p data-l10n-id="TU"></p></a></li>
-                            <li><a href="#"><p>UW</p><p data-l10n-id="UW"></p></a></li>
-                            <li><a href="#"><p>VBG</p><p data-l10n-id="VBG"></p></a></li>
-                            <li><a href="#"><p>WB</p><p data-l10n-id="WB"></p></a></li>
-                            <li><a href="#"><p>WDALYIC</p><p data-l10n-id="WDALYIC"></p></a></li>
-                            <li><a href="#"><p>W/E</p><p data-l10n-id="W_E"></p></a></li>
-                            <li><a href="#"><p>WFM</p><p data-l10n-id="WFM"></p></a></li>
-                            <li><a href="#"><p>WIBNI</p><p data-l10n-id="WIBNI"></p></a></li>
-                            <li><a href="#"><p>WTG</p><p data-l10n-id="WTG"></p></a></li>
-                            <li><a href="#"><p>WTGP</p><p data-l10n-id="WTGP"></p></a></li>
-                            <li><a href="#"><p>WTH</p><p data-l10n-id="WTH"></p></a></li>
-                            <li><a href="#"><p>WUF</p><p data-l10n-id="WUF"></p></a></li>
-                            <li><a href="#"><p>WYSIWYG</p><p data-l10n-id="WYSIWYG"></p></a></li>
-                            <li><a href="#"><p>YBS</p><p data-l10n-id="YBS"></p></a></li>
-                            <li><a href="#"><p>YG</p><p data-l10n-id="YG"></p></a></li>
-                            <li><a href="#"><p>YL</p><p data-l10n-id="YL"></p></a></li>
-                            <li><a href="#"><p>YM</p><p data-l10n-id="YM"></p></a></li>
-                        </ul>
+        <main id="main">
+            <menu>
+                <div class="list">
+                    <div class="item item-divider" data-l10n-id="select_option_language"></div>
+                    <div class="item item-button-right" data-l10n="en-US">
+                        Inglish
+                        <button class="button button-positive">
+                            <i class="icon ion-arrow-right-a"></i>
+                        </button>
                     </div>
+                    <div class="item item-button-right" data-l10n="pt-BR">
+                        Português
+                        <button class="button button-positive">
+                            <i class="icon ion-arrow-right-a"></i>
+                        </button>
+                    </div>
+                </div>
+            </menu>
+            <section>
+                <header class="bar bar-header">
+                  <button class="button icon ion-navicon"></button>
+                  <div class="h1 title">Chat Abbreviation</div>
+                </header>
+                <header class="bar bar-subheader bar-secondary">
+                    <div class="bar bar-header item-input-inset">
+                        <label class="item-input-wrapper">
+                        <i class="icon ion-ios7-search placeholder-icon"></i>
+                        <input type="search" data-l10n-id="search_text" placeholder="">
+                        </label>
+                        <button class="button button-clear" data-l10n-id="clear"></button>
+                    </div>
+                </header>
+                <article class="content has-subheader">
+                    <ul class="list">
+                        <li class="item"><h2>121</h2><p data-l10n-id="121"></h2></a></li>
+                        <li class="item"><h2>AFAIK</h2><p data-l10n-id="AFAIK"></h2></a></li>
+                        <li class="item"><h2>AFK</h2><p data-l10n-id="AFK"></h2></a></li>
+                        <li class="item"><h2>AKA</h2><p data-l10n-id="AKA"></h2></a></li>
+                        <li class="item"><h2>ARE</h2><p data-l10n-id="ARE"></h2></a></li>
+                        <li class="item"><h2>ASAP</h2><p data-l10n-id="ASAP"></h2></a></li>
+                        <li class="item"><h2>A/S/L?</h2><p data-l10n-id="A_S_L"></h2></a></li>
+                        <li class="item"><h2>B4</h2><p data-l10n-id="B4"></h2></a></li>
+                        <li class="item"><h2>B4N</h2><p data-l10n-id="B4N"></h2></a></li>
+                        <li class="item"><h2>BAK</h2><p data-l10n-id="BAK"></h2></a></li>
+                        <li class="item"><h2>BBIAB</h2><p data-l10n-id="BBIAB"></h2></a></li>
+                        <li class="item"><h2>BBL</h2><p data-l10n-id="BBL"></h2></a></li>
+                        <li class="item"><h2>BBML</h2><p data-l10n-id="BBML"></h2></a></li>
+                        <li class="item"><h2>BBN</h2><p data-l10n-id="BBN"></h2></a></li>
+                        <li class="item"><h2>BBS</h2><p data-l10n-id="BBS"></h2></a></li>
+                        <li class="item"><h2>BEG</h2><p data-l10n-id="BEG"></h2></a></li>
+                        <li class="item"><h2>BF</h2><p data-l10n-id="BF"></h2></a></li>
+                        <li class="item"><h2>BFN</h2><p data-l10n-id="BFN"></h2></a></li>
+                        <li class="item"><h2>BG</h2><p data-l10n-id="BG"></h2></a></li>
+                        <li class="item"><h2>BL</h2><p data-l10n-id="BL"></h2></a></li>
+                        <li class="item"><h2>BRB</h2><p data-l10n-id="BRB"></h2></a></li>
+                        <li class="item"><h2>BTA</h2><p data-l10n-id="BTA"></h2></a></li>
+                        <li class="item"><h2>BTW</h2><p data-l10n-id="BTW"></h2></a></li>
+                        <li class="item"><h2>BWL</h2><p data-l10n-id="BWL"></h2></a></li>
+                        <li class="item"><h2>BWTHDIK</h2><p data-l10n-id="BWTHDIK"></h2></a></li>
+                        <li class="item"><h2>C&G</h2><p data-l10n-id="C&G"></h2></a></li>
+                        <li class="item"><h2>CID</h2><p data-l10n-id="CID"></h2></a></li>
+                        <li class="item"><h2>CNP</h2><p data-l10n-id="CNP"></h2></a></li>
+                        <li class="item"><h2>CP</h2><p data-l10n-id="CP"></h2></a></li>
+                        <li class="item"><h2>CRBT</h2><p data-l10n-id="CRBT"></h2></a></li>
+                        <li class="item"><h2>CSG</h2><p data-l10n-id="CSG"></h2></a></li>
+                        <li class="item"><h2>CU</h2><p data-l10n-id="CU"></h2></a></li>
+                        <li class="item"><h2>CUL</h2><p data-l10n-id="CUL"></h2></a></li>
+                        <li class="item"><h2>CUL8ER</h2><p data-l10n-id="CUL8ER"></h2></a></li>
+                        <li class="item"><h2>CUZ</h2><p data-l10n-id="CUZ"></h2></a></li>
+                        <li class="item"><h2>CYO</h2><p data-l10n-id="CYO"></h2></a></li>
+                        <li class="item"><h2>DIKU</h2><p data-l10n-id="DIKU"></h2></a></li>
+                        <li class="item"><h2>DL</h2><p data-l10n-id="DL"></h2></a></li>
+                        <li class="item"><h2>DLTBBB</h2><p data-l10n-id="DLTBBB"></h2></a></li>
+                        <li class="item"><h2>DQMOT</h2><p data-l10n-id="DQMOT"></h2></a></li>
+                        <li class="item"><h2>EG</h2><p data-l10n-id="EG"></h2></a></li>
+                        <li class="item"><h2>EMFBI</h2><p data-l10n-id="EMFBI"></h2></a></li>
+                        <li class="item"><h2>EOM</h2><p data-l10n-id="EOM"></h2></a></li>
+                        <li class="item"><h2>EOT</h2><p data-l10n-id="EOT"></h2></a></li>
+                        <li class="item"><h2>F2F</h2><p data-l10n-id="F2F"></h2></a></li>
+                        <li class="item"><h2>FAQ</h2><p data-l10n-id="FAQ"></h2></a></li>
+                        <li class="item"><h2>FC</h2><p data-l10n-id="FC"></h2></a></li>
+                        <li class="item"><h2>FISH</h2><p data-l10n-id="FISH"></h2></a></li>
+                        <li class="item"><h2>FMTYEWTK</h2><p data-l10n-id="FMTYEWTK"></h2></a></li>
+                        <li class="item"><h2>FOMCL</h2><p data-l10n-id="FOMCL"></h2></a></li>
+                        <li class="item"><h2>FTBOMH</h2><p data-l10n-id="FTBOMH"></h2></a></li>
+                        <li class="item"><h2>FUD</h2><p data-l10n-id="FUD"></h2></a></li>
+                        <li class="item"><h2>FWIW</h2><p data-l10n-id="FWIW"></h2></a></li>
+                        <li class="item"><h2>FYI</h2><p data-l10n-id="FYI"></h2></a></li>
+                        <li class="item"><h2>GA</h2><p data-l10n-id="GA"></h2></a></li>
+                        <li class="item"><h2>GAL</h2><p data-l10n-id="GAL"></h2></a></li>
+                        <li class="item"><h2>GD&R</h2><p data-l10n-id="GD&R"></h2></a></li>
+                        <li class="item"><h2>GF</h2><p data-l10n-id="GF"></h2></a></li>
+                        <li class="item"><h2>GFN</h2><p data-l10n-id="GFN"></h2></a></li>
+                        <li class="item"><h2>GIWIST</h2><p data-l10n-id="GIWIST"></h2></a></li>
+                        <li class="item"><h2>GMBO</h2><p data-l10n-id="GMBO"></h2></a></li>
+                        <li class="item"><h2>GMT A</h2><p data-l10n-id="GMT_A"></h2></a></li>
+                        <li class="item"><h2>GOL</h2><p data-l10n-id="GOL"></h2></a></li>
+                        <li class="item"><h2>GTRM</h2><p data-l10n-id="GTRM"></h2></a></li>
+                        <li class="item"><h2>GTSY</h2><p data-l10n-id="GTSY"></h2></a></li>
+                        <li class="item"><h2>H&K</h2><p data-l10n-id="H&K"></h2></a></li>
+                        <li class="item"><h2>HAGN</h2><p data-l10n-id="HAGN"></h2></a></li>
+                        <li class="item"><h2>HHIS</h2><p data-l10n-id="HHIS"></h2></a></li>
+                        <li class="item"><h2>HTH</h2><p data-l10n-id="HTH"></h2></a></li>
+                        <li class="item"><h2>lAC</h2><p data-l10n-id="lAC"></h2></a></li>
+                        <li class="item"><h2>IAE</h2><p data-l10n-id="IAE"></h2></a></li>
+                        <li class="item"><h2>IANAL</h2><p data-l10n-id="IANAL"></h2></a></li>
+                        <li class="item"><h2>IC</h2><p data-l10n-id="IC"></h2></a></li>
+                        <li class="item"><h2>IDK</h2><p data-l10n-id="IDK"></h2></a></li>
+                        <li class="item"><h2>IHA</h2><p data-l10n-id="IHA"></h2></a></li>
+                        <li class="item"><h2>IIRC</h2><p data-l10n-id="IIRC"></h2></a></li>
+                        <li class="item"><h2>ILU</h2><p data-l10n-id="ILU"></h2></a></li>
+                        <li class="item"><h2>IM</h2><p data-l10n-id="IM"></h2></a></li>
+                        <li class="item"><h2>IMHO</h2><p data-l10n-id="IMHO"></h2></a></li>
+                        <li class="item"><h2>IMing</h2><p data-l10n-id="IMing"></h2></a></li>
+                        <li class="item"><h2>IMNSHO</h2><p data-l10n-id="IMNSHO"></h2></a></li>
+                        <li class="item"><h2>IMO</h2><p data-l10n-id="IMO"></h2></a></li>
+                        <li class="item"><h2>lOW</h2><p data-l10n-id="lOW"></h2></a></li>
+                        <li class="item"><h2>IPN</h2><p data-l10n-id="IPN"></h2></a></li>
+                        <li class="item"><h2>IRL</h2><p data-l10n-id="IRL"></h2></a></li>
+                        <li class="item"><h2>IWALU</h2><p data-l10n-id="IWALU"></h2></a></li>
+                        <li class="item"><h2>IYSWIM</h2><p data-l10n-id="IYSWIM"></h2></a></li>
+                        <li class="item"><h2>JBOD</h2><p data-l10n-id="JBOD"></h2></a></li>
+                        <li class="item"><h2>JIC</h2><p data-l10n-id="JIC"></h2></a></li>
+                        <li class="item"><h2>JK</h2><p data-l10n-id="JK"></h2></a></li>
+                        <li class="item"><h2>JMO</h2><p data-l10n-id="JMO"></h2></a></li>
+                        <li class="item"><h2>JTLYK</h2><p data-l10n-id="JTLYK"></h2></a></li>
+                        <li class="item"><h2>JW</h2><p data-l10n-id="JW"></h2></a></li>
+                        <li class="item"><h2>K</h2><p data-l10n-id="K"></h2></a></li>
+                        <li class="item"><h2>KIT</h2><p data-l10n-id="KIT"></h2></a></li>
+                        <li class="item"><h2>KOC</h2><p data-l10n-id="KOC"></h2></a></li>
+                        <li class="item"><h2>KOL</h2><p data-l10n-id="KOL"></h2></a></li>
+                        <li class="item"><h2>KWIM</h2><p data-l10n-id="KWIM"></h2></a></li>
+                        <li class="item"><h2>L2M</h2><p data-l10n-id="L2M"></h2></a></li>
+                        <li class="item"><h2>L8R</h2><p data-l10n-id="L8R"></h2></a></li>
+                        <li class="item"><h2>LD</h2><p data-l10n-id="LD"></h2></a></li>
+                        <li class="item"><h2>LDR</h2><p data-l10n-id="LDR"></h2></a></li>
+                        <li class="item"><h2>LHM</h2><p data-l10n-id="LHM"></h2></a></li>
+                        <li class="item"><h2>LHU</h2><p data-l10n-id="LHU"></h2></a></li>
+                        <li class="item"><h2>LLTA</h2><p data-l10n-id="LLTA"></h2></a></li>
+                        <li class="item"><h2>LMIRL</h2><p data-l10n-id="LMIRL"></h2></a></li>
+                        <li class="item"><h2>LMSO</h2><p data-l10n-id="LMSO"></h2></a></li>
+                        <li class="item"><h2>LOL</h2><p data-l10n-id="LOL"></h2></a></li>
+                        <li class="item"><h2>LRF</h2><p data-l10n-id="LRF"></h2></a></li>
+                        <li class="item"><h2>LSHMBB</h2><p data-l10n-id="LSHMBB"></h2></a></li>
+                        <li class="item"><h2>LSHMBH</h2><p data-l10n-id="LSHMBH"></h2></a></li>
+                        <li class="item"><h2>LSHTTARDML</h2><p data-l10n-id="LSHTTARDML"></h2></a></li>
+                        <li class="item"><h2>LTM</h2><p data-l10n-id="LTM"></h2></a></li>
+                        <li class="item"><h2>PMP</h2><p data-l10n-id="PMP"></h2></a></li>
+                        <li class="item"><h2>POAHF</h2><p data-l10n-id="POAHF"></h2></a></li>
+                        <li class="item"><h2>POS</h2><p data-l10n-id="POS"></h2></a></li>
+                        <li class="item"><h2>POTS</h2><p data-l10n-id="POTS"></h2></a></li>
+                        <li class="item"><h2>PU</h2><p data-l10n-id="PU"></h2></a></li>
+                        <li class="item"><h2>QSL</h2><p data-l10n-id="QSL"></h2></a></li>
+                        <li class="item"><h2>QSO</h2><p data-l10n-id="QSO"></h2></a></li>
+                        <li class="item"><h2>QT</h2><p data-l10n-id="QT"></h2></a></li>
+                        <li class="item"><h2>RL</h2><p data-l10n-id="RL"></h2></a></li>
+                        <li class="item"><h2>ROL</h2><p data-l10n-id="ROL"></h2></a></li>
+                        <li class="item"><h2>ROTFL</h2><p data-l10n-id="ROTFL"></h2></a></li>
+                        <li class="item"><h2>RPG</h2><p data-l10n-id="RPG"></h2></a></li>
+                        <li class="item"><h2>RSN</h2><p data-l10n-id="RSN"></h2></a></li>
+                        <li class="item"><h2>RYO</h2><p data-l10n-id="RYO"></h2></a></li>
+                        <li class="item"><h2>S4L</h2><p data-l10n-id="S4L"></h2></a></li>
+                        <li class="item"><h2>SETE</h2><p data-l10n-id="SETE"></h2></a></li>
+                        <li class="item"><h2>SF</h2><p data-l10n-id="SF"></h2></a></li>
+                        <li class="item"><h2>SHCOON</h2><p data-l10n-id="SHCOON"></h2></a></li>
+                        <li class="item"><h2>SHID</h2><p data-l10n-id="SHID"></h2></a></li>
+                        <li class="item"><h2>SNERT</h2><p data-l10n-id="SNERT"></h2></a></li>
+                        <li class="item"><h2>SO</h2><p data-l10n-id="SO"></h2></a></li>
+                        <li class="item"><h2>SO MY</h2><p data-l10n-id="SO_MY"></h2></a></li>
+                        <li class="item"><h2>SOT</h2><p data-l10n-id="SOT"></h2></a></li>
+                        <li class="item"><h2>SOTMG</h2><p data-l10n-id="SOTMG"></h2></a></li>
+                        <li class="item"><h2>STW</h2><p data-l10n-id="STW"></h2></a></li>
+                        <li class="item"><h2>SUP</h2><p data-l10n-id="SUP"></h2></a></li>
+                        <li class="item"><h2>WU</h2><p data-l10n-id="WU"></h2></a></li>
+                        <li class="item"><h2>SWAK</h2><p data-l10n-id="SWAK"></h2></a></li>
+                        <li class="item"><h2>SWL</h2><p data-l10n-id="SWL"></h2></a></li>
+                        <li class="item"><h2>SYS</h2><p data-l10n-id="SYS"></h2></a></li>
+                        <li class="item"><h2>TA</h2><p data-l10n-id="TA"></h2></a></li>
+                        <li class="item"><h2>TAFN</h2><p data-l10n-id="TAFN"></h2></a></li>
+                        <li class="item"><h2>TAW</h2><p data-l10n-id="TAW"></h2></a></li>
+                        <li class="item"><h2>TCOB</h2><p data-l10n-id="TCOB"></h2></a></li>
+                        <li class="item"><h2>TCOY</h2><p data-l10n-id="TCOY"></h2></a></li>
+                        <li class="item"><h2>TFH</h2><p data-l10n-id="TFH"></h2></a></li>
+                        <li class="item"><h2>TGIF</h2><p data-l10n-id="TGIF"></h2></a></li>
+                        <li class="item"><h2>THX</h2><p data-l10n-id="THX"></h2></a></li>
+                        <li class="item"><h2>TIA</h2><p data-l10n-id="TIA"></h2></a></li>
+                        <li class="item"><h2>TILII</h2><p data-l10n-id="TILII"></h2></a></li>
+                        <li class="item"><h2>TLK2UL8R</h2><p data-l10n-id="TLK2UL8R"></h2></a></li>
+                        <li class="item"><h2>TMI</h2><p data-l10n-id="TMI"></h2></a></li>
+                        <li class="item"><h2>TNT</h2><p data-l10n-id="TNT"></h2></a></li>
+                        <li class="item"><h2>TOPCA</h2><p data-l10n-id="TOPCA"></h2></a></li>
+                        <li class="item"><h2>TOY</h2><p data-l10n-id="TOY"></h2></a></li>
+                        <li class="item"><h2>TPTB</h2><p data-l10n-id="TPTB"></h2></a></li>
+                        <li class="item"><h2>TTFN</h2><p data-l10n-id="TTFN"></h2></a></li>
+                        <li class="item"><h2>TTT</h2><p data-l10n-id="TTT"></h2></a></li>
+                        <li class="item"><h2>TTYL</h2><p data-l10n-id="TTYL"></h2></a></li>
+                        <li class="item"><h2>TU</h2><p data-l10n-id="TU"></h2></a></li>
+                        <li class="item"><h2>UW</h2><p data-l10n-id="UW"></h2></a></li>
+                        <li class="item"><h2>VBG</h2><p data-l10n-id="VBG"></h2></a></li>
+                        <li class="item"><h2>WB</h2><p data-l10n-id="WB"></h2></a></li>
+                        <li class="item"><h2>WDALYIC</h2><p data-l10n-id="WDALYIC"></h2></a></li>
+                        <li class="item"><h2>W/E</h2><p data-l10n-id="W_E"></h2></a></li>
+                        <li class="item"><h2>WFM</h2><p data-l10n-id="WFM"></h2></a></li>
+                        <li class="item"><h2>WIBNI</h2><p data-l10n-id="WIBNI"></h2></a></li>
+                        <li class="item"><h2>WTG</h2><p data-l10n-id="WTG"></h2></a></li>
+                        <li class="item"><h2>WTGP</h2><p data-l10n-id="WTGP"></h2></a></li>
+                        <li class="item"><h2>WTH</h2><p data-l10n-id="WTH"></h2></a></li>
+                        <li class="item"><h2>WUF</h2><p data-l10n-id="WUF"></h2></a></li>
+                        <li class="item"><h2>WYSIWYG</h2><p data-l10n-id="WYSIWYG"></h2></a></li>
+                        <li class="item"><h2>YBS</h2><p data-l10n-id="YBS"></h2></a></li>
+                        <li class="item"><h2>YG</h2><p data-l10n-id="YG"></h2></a></li>
+                        <li class="item"><h2>YL</h2><p data-l10n-id="YL"></h2></a></li>
+                        <li class="item"><h2>YM</h2><p data-l10n-id="YM"></h2></a></li>
+                    </ul>
                 </article>
             </section>
-        </section>
-        <script type="text/javascript" src="js/app.js"></script>
+        </main>
     </body>
 </html>
