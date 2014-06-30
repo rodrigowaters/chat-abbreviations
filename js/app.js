@@ -13,17 +13,14 @@ function onLocalized() {
 }
 $(document).ready(function() {
     document.webL10n.ready(onLocalized);
-    $('main#main section header.bar-subheader div.bar-header input').keyup(function() {
-        var text = $.trim($(this).val());
+    $('main#main section header.bar-subheader div.bar-header button').click(function() {
+        var text = $.trim( $('main#main section header.bar-subheader div.bar-header input').val());
         if (text) {
             $('main#main section article ul li').hide();
             $("main#main section article ul li h2:contains('" + (text.toUpperCase()) + "')").closest('li').fadeIn();
         } else {
             $('main#main section article ul li').show();
         }
-    });
-    $('main#main section header.bar-subheader div.bar-header button').click(function() {
-        $('main#main section header.bar-subheader div.bar-header input').val('').keyup();
     });
     $('main#main section header.bar-header button').click(function() {
         $('main#main').toggleClass('show_menu');
