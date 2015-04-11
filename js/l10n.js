@@ -1,24 +1,24 @@
 /**
-* Copyright (c) 2011-2013 Fabien Cazenave, Mozilla.
-*
-* Permission is hereby granted, free of charge, to any person obtaining a copy
-* of this software and associated documentation files (the "Software"), to
-* deal in the Software without restriction, including without limitation the
-* rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-* sell copies of the Software, and to permit persons to whom the Software is
-* furnished to do so, subject to the following conditions:
-*
-* The above copyright notice and this permission notice shall be included in
-* all copies or substantial portions of the Software.
-*
-* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-* FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-* IN THE SOFTWARE.
-*/
+ * Copyright (c) 2011-2013 Fabien Cazenave, Mozilla.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to
+ * deal in the Software without restriction, including without limitation the
+ * rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+ * sell copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+ * IN THE SOFTWARE.
+ */
 
 /*jshint browser: true, devel: true, es5: true, globalstrict: true */
 'use strict';
@@ -33,27 +33,27 @@ document.webL10n = (function(window, document, undefined) {
 
 
   /**
-* Synchronously loading l10n resources significantly minimizes flickering
-* from displaying the app with non-localized strings and then updating the
-* strings. Although this will block all script execution on this page, we
-* expect that the l10n resources are available locally on flash-storage.
-*
-* As synchronous XHR is generally considered as a bad idea, we're still
-* loading l10n resources asynchronously -- but we keep this in a setting,
-* just in case... and applications using this library should hide their
-* content until the `localized' event happens.
-*/
+   * Synchronously loading l10n resources significantly minimizes flickering
+   * from displaying the app with non-localized strings and then updating the
+   * strings. Although this will block all script execution on this page, we
+   * expect that the l10n resources are available locally on flash-storage.
+   *
+   * As synchronous XHR is generally considered as a bad idea, we're still
+   * loading l10n resources asynchronously -- but we keep this in a setting,
+   * just in case... and applications using this library should hide their
+   * content until the `localized' event happens.
+   */
 
   var gAsyncResourceLoading = true; // read-only
 
 
   /**
-* Debug helpers
-*
-* gDEBUG == 0: don't display any console message
-* gDEBUG == 1: display only warnings, not logs
-* gDEBUG == 2: display all console messages
-*/
+   * Debug helpers
+   *
+   *   gDEBUG == 0: don't display any console message
+   *   gDEBUG == 1: display only warnings, not logs
+   *   gDEBUG == 2: display all console messages
+   */
 
   var gDEBUG = 1;
 
@@ -71,11 +71,11 @@ document.webL10n = (function(window, document, undefined) {
 
 
   /**
-* DOM helpers for the so-called "HTML API".
-*
-* These functions are written for modern browsers. For old versions of IE,
-* they're overridden in the 'startup' section at the end of this file.
-*/
+   * DOM helpers for the so-called "HTML API".
+   *
+   * These functions are written for modern browsers. For old versions of IE,
+   * they're overridden in the 'startup' section at the end of this file.
+   */
 
   function getL10nResourceLinks() {
     return document.querySelectorAll('link[type="application/l10n"]');
@@ -149,27 +149,27 @@ document.webL10n = (function(window, document, undefined) {
 
 
   /**
-* l10n resource parser:
-* - reads (async XHR) the l10n resource matching `lang';
-* - imports linked resources (synchronously) when specified;
-* - parses the text data (fills `gL10nData' and `gTextData');
-* - triggers success/failure callbacks when done.
-*
-* @param {string} href
-* URL of the l10n resource to parse.
-*
-* @param {string} lang
-* locale (language) to parse.
-*
-* @param {Function} successCallback
-* triggered when the l10n resource has been successully parsed.
-*
-* @param {Function} failureCallback
-* triggered when the an error has occured.
-*
-* @return {void}
-* uses the following global variables: gL10nData, gTextData, gTextProp.
-*/
+   * l10n resource parser:
+   *  - reads (async XHR) the l10n resource matching `lang';
+   *  - imports linked resources (synchronously) when specified;
+   *  - parses the text data (fills `gL10nData' and `gTextData');
+   *  - triggers success/failure callbacks when done.
+   *
+   * @param {string} href
+   *    URL of the l10n resource to parse.
+   *
+   * @param {string} lang
+   *    locale (language) to parse.
+   *
+   * @param {Function} successCallback
+   *    triggered when the l10n resource has been successully parsed.
+   *
+   * @param {Function} failureCallback
+   *    triggered when the an error has occured.
+   *
+   * @return {void}
+   *    uses the following global variables: gL10nData, gTextData, gTextProp.
+   */
 
   function parseResource(href, lang, successCallback, failureCallback) {
     var baseURL = href.replace(/[^\/]*$/, '') || './';
@@ -357,20 +357,20 @@ document.webL10n = (function(window, document, undefined) {
 
 
   /**
-* Get rules for plural forms (shared with JetPack), see:
-* http://unicode.org/repos/cldr-tmp/trunk/diff/supplemental/language_plural_rules.html
-* https://github.com/mozilla/addon-sdk/blob/master/python-lib/plural-rules-generator.p
-*
-* @param {string} lang
-* locale (language) used.
-*
-* @return {Function}
-* returns a function that gives the plural form name for a given integer:
-* var fun = getPluralRules('en');
-* fun(1) -> 'one'
-* fun(0) -> 'other'
-* fun(1000) -> 'other'.
-*/
+   * Get rules for plural forms (shared with JetPack), see:
+   * http://unicode.org/repos/cldr-tmp/trunk/diff/supplemental/language_plural_rules.html
+   * https://github.com/mozilla/addon-sdk/blob/master/python-lib/plural-rules-generator.p
+   *
+   * @param {string} lang
+   *    locale (language) used.
+   *
+   * @return {Function}
+   *    returns a function that gives the plural form name for a given integer:
+   *       var fun = getPluralRules('en');
+   *       fun(1)    -> 'one'
+   *       fun(0)    -> 'other'
+   *       fun(1000) -> 'other'.
+   */
 
   function getPluralRules(lang) {
     var locales2rules = {
@@ -801,8 +801,8 @@ document.webL10n = (function(window, document, undefined) {
 
 
   /**
-* l10n dictionary functions
-*/
+   * l10n dictionary functions
+   */
 
   // fetch an l10n object, warn if not found, apply `args' if possible
   function getL10nData(key, args) {
@@ -812,10 +812,10 @@ document.webL10n = (function(window, document, undefined) {
     }
 
     /** This is where l10n expressions should be processed.
-* The plan is to support C-style expressions from the l20n project;
-* until then, only two kinds of simple expressions are supported:
-* {[ index ]} and {{ arguments }}.
-*/
+      * The plan is to support C-style expressions from the l20n project;
+      * until then, only two kinds of simple expressions are supported:
+      *   {[ index ]} and {{ arguments }}.
+      */
     var rv = {};
     for (var prop in data) {
       var str = data[prop];
@@ -957,13 +957,13 @@ document.webL10n = (function(window, document, undefined) {
 
 
   /**
-* Startup & Public API
-*
-* Warning: this part of the code contains browser-specific chunks --
-* that's where obsolete browsers, namely IE8 and earlier, are handled.
-*
-* Unlike the rest of the lib, this section is not shared with FirefoxOS/Gaia.
-*/
+   * Startup & Public API
+   *
+   * Warning: this part of the code contains browser-specific chunks --
+   * that's where obsolete browsers, namely IE8 and earlier, are handled.
+   *
+   * Unlike the rest of the lib, this section is not shared with FirefoxOS/Gaia.
+   */
 
   // load the default locale on startup
   function l10nStartup() {
@@ -1154,3 +1154,4 @@ document.webL10n = (function(window, document, undefined) {
 if (window._ === undefined) {
   var _ = document.webL10n.get;
 }
+
