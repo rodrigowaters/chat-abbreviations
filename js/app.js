@@ -1,1 +1,0 @@
-angular.module('App', ['ngMaterial', 'App.controllers', 'App.services']);

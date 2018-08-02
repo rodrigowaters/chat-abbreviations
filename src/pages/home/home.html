@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Chat Abbreviation
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card *ngFor="let item of items">
+    <ion-card-header text-left>{{item.title}}</ion-card-header>
+    <ion-card-content text-justify>
+      <p>{{item.description.enUS}}</p>
+      <p>{{item.description.ptBR}}</p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
