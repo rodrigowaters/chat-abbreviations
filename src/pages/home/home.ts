@@ -10,6 +10,12 @@ export class HomePage {
 
   constructor() {
 
+    this.initializeItems();
+
+  }
+
+  initializeItems() {
+
     this.items = [
       {
         "title": "121",
@@ -1266,6 +1272,29 @@ export class HomePage {
       },
     ];
 
+  }
+
+  getItems(ev: any) {
+
+    // Resetar items
+    this.initializeItems();
+
+    // Localizar valor digitado
+    const val = ev.target.value;
+
+    // Validar se tem conteudo
+    if (val && val.trim() != '') {
+      this.items = this.items.filter((item) => {
+        return (
+          // Filtrar no titulo
+          (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1) ||
+          // Filtrar em en-US
+          (item.description.enUS.toLowerCase().indexOf(val.toLowerCase()) > -1) ||
+          // Filtrar em pt-BR
+          (item.description.ptBR.toLowerCase().indexOf(val.toLowerCase()) > -1)
+        );
+      })
+    }
   }
 
 }

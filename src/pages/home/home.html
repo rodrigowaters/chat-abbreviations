@@ -8,6 +8,8 @@
 
 <ion-content>
 
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+
   <ion-card *ngFor="let item of items">
     <ion-card-header text-left>{{item.title}}</ion-card-header>
     <ion-card-content padding text-justify>
