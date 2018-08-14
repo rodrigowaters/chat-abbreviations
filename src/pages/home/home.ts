@@ -50,7 +50,7 @@ export class HomePage {
         "title": "ASAP",
         "description": {
           "enUS": "as soon as possible",
-          "ptBR":"o mais breve possídvel"
+          "ptBR":"o mais breve possível"
         }
       },
       {
@@ -126,7 +126,7 @@ export class HomePage {
       {
         "title": "BF",
         "description": {
-          "enUS": "boyfriend!",
+          "enUS": "boyfriend",
           "ptBR":"namorado"
         }
       },
@@ -134,7 +134,7 @@ export class HomePage {
         "title": "BFN",
         "description": {
           "enUS": "bye for now",
-          "ptBR":"bye, por enquanto"
+          "ptBR":"tchau, por enquanto"
         }
       },
       {
