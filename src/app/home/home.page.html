@@ -1,0 +1,21 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            Chat Abbreviations
+        </ion-title>
+    </ion-toolbar>
+    <ion-toolbar>
+        <ion-searchbar debounce="500" (ionChange)="search($event)"
+                       placeholder="Digite aqui para pesquisar"></ion-searchbar>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card *ngFor="let item of items">
+        <ion-card-header text-left>{{item.title}}</ion-card-header>
+        <ion-card-content padding text-justify>
+          <p>{{item.description.enUS}}</p>
+          <p>{{item.description.ptBR}}</p>
+        </ion-card-content>
+      </ion-card>
+</ion-content>
