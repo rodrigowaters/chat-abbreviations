@@ -1,7 +1,7 @@
 {
-  "name": "Chat Abbreviations",
+  "name": "chat-abbreviations",
   "integrations": {
     "cordova": {}
   },
-  "type": "ionic-angular"
+  "type": "angular"
 }
