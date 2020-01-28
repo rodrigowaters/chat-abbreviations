@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.com/rodrigowaters/chat-abbreviation.svg?branch=master)](https://travis-ci.com/rodrigowaters/chat-abbreviation)
-[![BCH compliance](https://bettercodehub.com/edge/badge/rodrigowaters/chat-abbreviation?branch=master)](https://bettercodehub.com/)
+[![Build Status](https://travis-ci.com/rodrigowaters/chat-abbreviations.svg?branch=master)](https://travis-ci.com/rodrigowaters/chat-abbreviations)
+[![BCH compliance](https://bettercodehub.com/edge/badge/rodrigowaters/chat-abbreviations?branch=master)](https://bettercodehub.com/)
 
 # chat-abbreviation
 
