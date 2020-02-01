@@ -8,6 +8,11 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "app:emulate": "ionic cordova emulate",
+    "app:run": "ionic cordova run",
+    "app:build": "ionic cordova build --release",
+    "app:sign": "jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore chat-abbreviations.keystore platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk chat_abbreviations",
+    "app:create": "zipalign -v 4 platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk chat-abbreviations.apk",
     "deploy": "ionic build --prod -- --base-href http://rodrigowaters.github.io/chat-abbreviations/ && npx angular-cli-ghpages --dir=www --name='Rodrigo Silva' --email=rdrgwtrs@gmail.com",
     "test": "ng test",
     "lint": "ng lint",
@@ -26,6 +31,7 @@
     "@ionic-native/status-bar": "5.20.0",
     "@ionic/angular": "4.11.10",
     "angular-cli-ghpages": "0.6.2",
+    "cordova-android": "8.1.0",
     "core-js": "3.6.4",
     "rxjs": "6.5.4",
     "tslib": "1.10.0",
@@ -45,6 +51,12 @@
     "@types/jasminewd2": "2.0.8",
     "@types/node": "8.10.59",
     "codelyzer": "5.2.1",
+    "cordova-plugin-device": "^2.0.2",
+    "cordova-plugin-ionic-keyboard": "^2.2.0",
+    "cordova-plugin-ionic-webview": "^4.1.3",
+    "cordova-plugin-splashscreen": "^5.0.2",
+    "cordova-plugin-statusbar": "^2.4.2",
+    "cordova-plugin-whitelist": "^1.3.3",
     "jasmine-core": "3.5.0",
     "jasmine-spec-reporter": "4.2.1",
     "karma": "4.4.1",
@@ -56,5 +68,20 @@
     "ts-node": "8.6.2",
     "tslint": "5.20.1",
     "typescript": "3.4.5"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-ionic-webview": {
+        "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
+      },
+      "cordova-plugin-ionic-keyboard": {}
+    },
+    "platforms": [
+      "android"
+    ]
   }
 }

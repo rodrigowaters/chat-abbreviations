@@ -1,6 +1,8 @@
 {
   "name": "chat-abbrevation",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular",
   "id": "10109588"
 }
