@@ -13,7 +13,8 @@
     "app:build": "ionic cordova build --release",
     "app:sign": "jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore chat-abbreviations.keystore platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk chat_abbreviations",
     "app:create": "zipalign -v 4 platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk chat-abbreviations.apk",
-    "deploy": "ionic build --prod -- --base-href http://rodrigowaters.github.io/chat-abbreviations/ && npx angular-cli-ghpages --dir=www --name='Rodrigo Silva' --email=rdrgwtrs@gmail.com",
+    "deploy": "ionic build --prod -- --base-href http://rodrigowaters.github.io/chat-abbreviations/",
+    "deploy_gh": "npx angular-cli-ghpages --dir=www --name='Rodrigo Silva' --email=rdrgwtrs@gmail.com",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
